@@ -1,6 +1,6 @@
 #!/bin/sh
 ## tar.gz project excluding classes and .svn
-project_folder='that-sort'
+project_folder='jaxb'
 
 cd ../../
 if [ ! -e ${project_folder} ]; then
@@ -10,4 +10,6 @@ tar -zcvf ${project_folder}.tar.gz ${project_folder} \
 --exclude='*.class' \
 --exclude-vcs \
 --exclude='*target*' \
---exclude='*bin*'
+--exclude='*bin*' \
+--exclude='*.iml' \
+--exclude='*idea*'
